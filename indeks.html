@@ -1,59 +1,59 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semangat Terus! 💖</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #000000 0%, #121212 100%);
-            font-family: 'Poppins', sans-serif;
-        }
-        .btn-yes {
-            background: linear-gradient(45deg, #ff69b4, #ff1493);
-            box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
-        }
-        .btn-yes:hover {
-            transform: scale(1.15);
-            box-shadow: 0 0 35px rgba(255, 105, 180, 0.8);
-        }
-        .btn-no {
-            background: #1a1a1a;
-            border: 2px solid #ff69b4;
-            color: white;
-            transition: all 0.1s ease;
-        }
-        .card {
-            background: rgba(15, 15, 15, 0.9);
-            border: 3px solid #ff69b4;
-            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yes or No</title>
+  <style>
+    body {
+      background-color: black;
+      color: pink;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: pink;
+      color: black;
+    }
+    .sticker {
+      margin-top: 30      font-size: 1.5em;
+      color: pink;
+    }
+    .message {
+ 30px;
+      font-size: 1.2em;
+      color: pink;
+    }
+  </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 m-0">
+<body>
+  <h1>Apakah Kamu Ingin?</h1>
+  <button class="button" onclick="redirectToYes()">Yes</button>
+button class="button" onclick="redirectToNo()">No</button>
+  <div class="sticker">✨ Stiker: "Kamu Hebat!" ✨</  <div class="message">Kata-kata Penyemangat: "Jangan menyerah, teruslah berjuang!"</div>
 
-    <div id="container" class="card rounded-3xl p-10 max-w-md w-full text-center relative overflow-hidden">
-        
-        <!-- Stiker Lucu -->
-        <div class="text-[100px] mb-6 animate-bounce">
-            <i class="fas fa-face-grin-hearts text-pink-500"></i>
-        </div>
+  <script>
+    function redirectToYes() {
+      window.location.href = "https://www.google.com"; // Ganti dengan link yang kamu inginkan
+    }
 
-        <!-- Pertanyaan & Kata Penyemangat -->
-        <h1 id="question" class="text-2xl font-bold text-white mb-8 leading-relaxed">
-            Kamu pasti bisa dan hebat kan? 💪✨
-        </h1>
-
-        <!-- Tombol -->
-        <div class="flex justify-center gap-8 items-center relative min-h-[100px]">
-            <button id="yesBtn" class="btn-yes text-white font-bold py-4 px-10 rounded-full text-xl cursor-pointer transition-all duration-300">
-                YES 💖
-            </button>
-            <button id="noBtn" class="btn-no font-bold py-4 px-10 rounded-full text-xl cursor-pointer absolute">
-                NO ❌
-            </button>
-        </div>
-
-        <!-- Stiker Tambahan -->
-        <div class="mt-10 text-4xl space-x-4">...
+    function redirectToNo() {
+      window.location.href = "https://www.google.com"; // Ganti dengan link yang kamu inginkan
+    }
+  </script>
+</body>
+</html>
