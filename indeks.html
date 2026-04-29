@@ -8,36 +8,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, #000000 0%, #121212 100%);
             font-family: 'Poppins', sans-serif;
         }
         .btn-yes {
             background: linear-gradient(45deg, #ff69b4, #ff1493);
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
         }
         .btn-yes:hover {
-            background: linear-gradient(45deg, #ff1493, #ff69b4);
-            transform: scale(1.1);
+            transform: scale(1.15);
+            box-shadow: 0 0 35px rgba(255, 105, 180, 0.8);
         }
         .btn-no {
-            background: #222222;
+            background: #1a1a1a;
             border: 2px solid #ff69b4;
             color: white;
             transition: all 0.1s ease;
         }
         .card {
-            background: rgba(20, 20, 20, 0.8);
-            border: 2px solid #ff69b4;
-            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+            background: rgba(15, 15, 15, 0.9);
+            border: 3px solid #ff69b4;
+            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
+<body class="min-h-screen flex items-center justify-center p-4 m-0">
 
-    <div id="container" class="card rounded-3xl p-8 max-w-md w-full text-center relative overflow-hidden">
+    <div id="container" class="card rounded-3xl p-10 max-w-md w-full text-center relative overflow-hidden">
         
         <!-- Stiker Lucu -->
-        <div class="text-8xl mb-6 animate-bounce">
+        <div class="text-[100px] mb-6 animate-bounce">
             <i class="fas fa-face-grin-hearts text-pink-500"></i>
         </div>
 
@@ -48,84 +48,13 @@
 
         <!-- Tombol -->
         <div class="flex justify-center gap-8 items-center relative min-h-[100px]">
-            <button id="yesBtn" class="btn-yes text-white font-bold py-4 px-8 rounded-full text-xl cursor-pointer transition-all duration-300">
+            <button id="yesBtn" class="btn-yes text-white font-bold py-4 px-10 rounded-full text-xl cursor-pointer transition-all duration-300">
                 YES 💖
             </button>
-            <button id="noBtn" class="btn-no font-bold py-4 px-8 rounded-full text-xl cursor-pointer absolute">
+            <button id="noBtn" class="btn-no font-bold py-4 px-10 rounded-full text-xl cursor-pointer absolute">
                 NO ❌
             </button>
         </div>
 
         <!-- Stiker Tambahan -->
-        <div class="mt-10 text-4xl space-x-4">
-            <i class="fas fa-star text-yellow-400 animate-pulse"></i>
-            <i class="fas fa-sparkles text-pink-400"></i>
-            <i class="fas fa-rocket text-pink-500"></i>
-        </div>
-    </div>
-
-    <script>
-        const noBtn = document.getElementById('noBtn');
-        const yesBtn = document.getElementById('yesBtn');
-        const container = document.getElementById('container');
-        const question = document.getElementById('question');
-
-        // Kumpulan kata-kata penyemangat yang unik
-        const messages = [
-            "Yah tekan YES dong, kamu hebat lho! 🥺✨",
-            "Jangan menyerah, kamu pasti bisa! 💪🔥",
-            "Tombol NO nya lagi ngambek nih 😂",
-            "Percaya diri dikit dong, kamu keren! 😎💕",
-            "AYO TEKAN YES!! Semangat terus!! 🚀🌈",
-            "Masa iya nggak percaya sama diri sendiri? 🤩💖"
-        ];
-
-        let messageIndex = 0;
-        let yesScale = 1;
-
-        // Tombol NO lari saat didekati
-        noBtn.addEventListener('mouseover', function() {
-            const containerWidth = container.offsetWidth;
-            const containerHeight = container.offsetHeight;
-            
-            const btnWidth = noBtn.offsetWidth;
-            const btnHeight = noBtn.offsetHeight;
-
-            // Hitung posisi random aman di dalam kotak
-            const maxX = containerWidth - btnWidth - 20;
-            const maxY = containerHeight - btnHeight - 20;
-
-            const randomX = Math.floor(Math.random() * maxX);
-            const randomY = Math.floor(Math.random() * maxY);
-
-            noBtn.style.left = randomX + "px";
-            noBtn.style.top = randomY + "px";
-
-            // Ganti kata-kata penyemangat
-            question.innerText = messages[messageIndex];
-            messageIndex = (messageIndex + 1) % messages.length;
-
-            // Besarkan tombol YES
-            yesScale += 0.15;
-            yesBtn.style.transform = `scale(${yesScale})`;
-        });
-
-        // Kalau akhirnya pencet YES
-        yesBtn.addEventListener('click', function() {
-            container.innerHTML = `
-                <div class="text-9xl animate-bounce mb-6">
-                    <i class="fas fa-face-laugh-squint text-pink-500"></i>
-                </div>
-                <h1 class="text-pink-500 text-4xl font-bold mb-4">HOREE!! 🎉💖</h1>
-                <p class="text-xl text-white mb-2">Beneran dong! Kamu itu hebat dan kuat!</p>
-                <p class="text-lg text-gray-300">Teruslah bersemangat dan jangan pernah menyerah! ✨🚀</p>
-                <div class="mt-8 text-6xl space-x-4 text-pink-500 animate-pulse">
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-fire"></i>
-                    <i class="fas fa-medal"></i>
-                </div>
-            `;
-        });
-    </script>
-</body>
-</html>
+        <div class="mt-10 text-4xl space-x-4">...
